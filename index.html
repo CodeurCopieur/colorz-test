@@ -19,9 +19,9 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header" id="header">
+  <header class="header">
     <nav class="nav container">
-      <a href="" class="header-nav__logo">Vison.R</a>
+      <a href="" class="header-nav__logo" id="navLogo">Vison.R</a>
       <div class="header-nav__menu" id="nav-menu">
         <ul class="header-nav__list">
           <li class="nav__item"><a href="" class="nav__link">Low Solution</a></li>
@@ -35,15 +35,15 @@
   <!-- MAIN -->
   <main class="main">
     <!--=============== COVER ===============-->
-    <section class="cover section">
-      <div class="cover__container">
-          <div class="cover__wrapper-tests">
+    <section class="cover section" >
+      <div class="cover__container" >
+          <div class="cover__wrapper-tests" id="coverWrapperTexts">
             <p class="cover__subtitle">
               Du JAMAIS VU (enfin jusqu’à maintenant, du coup)
             </p>
             <h1 class="cover__title">Avec Vision.R, travaillez au bureau... comme si vous étiez encore à la maison ! </h1>
           </div>
-          <div class="cover__wrapper-media">
+          <div class="cover__wrapper-media" id="coverWrapperMedia">
               <picture>
                 <source media="(min-width: 1024px)" srcset="./assets/img/desk-cover.svg">
                 <source media="(min-width: 768px)" srcset="./assets/img/desk-cover.svg">
@@ -52,7 +52,7 @@
               </picture>
           </div>
       </div>
-      <div class="cover__offre-special">
+      <div class="cover__offre-special" id="offreSpecial">
         <h5>Offre speciale</h5>
         <p>799,99€*</p>
         <span>*au lieu de 1.499,99€</span>
@@ -294,39 +294,45 @@
     </section>
     <!--=============== FOOTER  ===============-->
 
-    <footer class="footer" id="footer"style="display: none">
-      <div class="footer__container">
+    <footer class="footer" id="footer">
+      <div class="footer__container container">
         <div class="footer__container-logo">
-          <img src="./assets/img/logo-colorz.svg" alt="" srcset="">
+          <picture>
+            <img src="./assets/img/logo-colorz.svg" alt="" srcset="">
+          </picture>
+          
         </div>
-        <nav class="nav container">
-          <div class="footer-nav__menu">
-            <ul class="footer-nav__list">
-              <li class="nav__item">
-                <span>Paris</span>
-                <p>
-                  16 bis avenue Parmentier <br>
-                  75011 Paris, France
-                </p>
-              </li>
-              <li class="nav__item">
-                <span>Lyon</span>
-                <p>
-                  1 rue Lalande <br>
-                  69006 Lyon, France
-                </p>
-              </li>
-              <li class="nav__item">
-                <span>Nous contacter</span>
-                <p>
-                  +33 (0)1 82 83 83 60 <br>
-                  hello@colorz.fr
-                </p>
-              </li>
-            </ul>
-            
-          </div>
-        </nav>
+        <div class="footer__nav-menu">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <span>Paris</span>
+              <p>
+                16 bis avenue Parmentier <br>
+                75011 Paris, France
+              </p>
+            </li>
+            <li class="footer__nav-item">
+              <span>Lyon</span>
+              <p>
+                1 rue Lalande <br>
+                69006 Lyon, France
+              </p>
+            </li>
+            <li class="footer__nav-item">
+              <span>Nous contacter</span>
+              <p>
+                +33 (0)1 82 83 83 60 <br>
+                hello@colorz.fr
+              </p>
+            </li>
+          </ul>
+          
+        </div>
+        <div class="footer__container-secondLogo">
+          <picture>
+            <img src="./assets/img/Logo-createdtoCreate.svg" alt="" srcset="">
+          </picture>
+        </div>
       </div>
       
     </footer>
