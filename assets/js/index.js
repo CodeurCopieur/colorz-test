@@ -1,7 +1,7 @@
 
 /*=============== TESTIMONIALS SWIPER ===============*/
-let homeSwiper = new Swiper(".testimonials-swiper", {
-  spaceBetween: 30,
+let homeSwiper = new Swiper(".testimonials-swiper, .slider-image__swipper", {
+
   loop: 'true',
   
   pagination: {
