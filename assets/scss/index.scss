@@ -233,6 +233,14 @@ $header-height: 3rem;
   }
 }
 
+.slider-image {
+
+  &__pagination {
+    margin-bottom: 16px;
+  }
+}
+
+
 /*===============  SITUATION ===============*/
 
 .situation {
@@ -393,6 +401,15 @@ $header-height: 3rem;
       margin-bottom: 10px;
     }
   }
+}
+
+.swiper-pagination-bullet {
+  background-color: $White;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $dark;
 }
 
 /*=============== MEDIA QUERIES ===============*/
