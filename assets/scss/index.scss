@@ -80,6 +80,21 @@ $header-height: 3rem;
   left: 0;
   z-index: 1000;
   background: transparent;
+
+  &-nav__logo {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $dark;
+  }
+
+  &.scroll-header {
+    background-color: $White;
+
+    .nav {
+      height: 3rem;
+    }
+  }
 }
 
 
@@ -89,8 +104,9 @@ $header-height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
+  height: 4rem;
   line-height: 3rem;
+  transition: all .5s linear;
 }
 
 .nav.container {
@@ -103,9 +119,7 @@ $header-height: 3rem;
 }
 
 .container{
-  max-width: 60.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  max-width: 100%;
 }
 
 
@@ -120,11 +134,14 @@ $header-height: 3rem;
       @include aspect-ratio(9, 16);
   }
 
-  &__wrapper-tests {
+  &__wrapper-texts {
     position: absolute;
-    top: 99px;
+    top: 14%;
     z-index: 100;
-    width: 100%;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+
     text-align: center;
   }
 
@@ -220,6 +237,8 @@ $header-height: 3rem;
     opacity: 0;
     visibility: hidden;
     transition: all .2s linear;
+    font-size: 16px;
+    line-height: 20px;
   }
   
 }
@@ -251,7 +270,7 @@ $header-height: 3rem;
   }
 
   &__wrapper-media {
-    @include aspect-ratio(4, 3);
+    @include aspect-ratio(8, 5);
   }
 }
 
@@ -320,7 +339,7 @@ $header-height: 3rem;
   }
 
   &__wrapper-media {
-    @include aspect-ratio(375, 416);
+    @include aspect-ratio(416, 416);
     margin-bottom: 30px;
   }
 
@@ -410,7 +429,7 @@ $header-height: 3rem;
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 40px;
-    max-width: 340px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -420,11 +439,12 @@ $header-height: 3rem;
     box-sizing: border-box;
     border-radius: 5px;
     width: 242px;
-    padding:24px 18px 20px 18px;
+    padding-top:24px;
+    padding-bottom:24px;
   }
 
   &__wrapper-media {
-    @include aspect-ratio(4, 3);
+    @include aspect-ratio(209, 209);
     margin-bottom: 20px;
   }
 
@@ -432,7 +452,7 @@ $header-height: 3rem;
 
     h5 {
       font-weight: 500;
-      font-size: 22px;
+      font-size: 15px;
       line-height: 34px;
       margin-bottom: 10px;
     }
@@ -447,7 +467,7 @@ $header-height: 3rem;
   background-color: $bgColor;
 
   &__container {
-    padding: 60px 20px;
+    padding: 60px 36px;
   }
 
   &__container-logo {
@@ -494,38 +514,88 @@ $header-height: 3rem;
   background-color: $dark;
 }
 
-/*=============== MEDIA QUERIES ===============*/
+/*===============  BREAKPOINTS ===============*/
 
+@media screen and (max-width: 320px) {
 
-@media screen and (min-width: 768px) {
-  .nav{
-    height: 4.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
+
+  .intro__container{
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1079px){
+
+  .cover {
+
+    &__wrapper-media {
+      @include aspect-ratio(800, 1000);
+    }
+  }
+
 }
 
 
 /* For large devices */
-@media screen and (min-width: 1024px){ 
-  .nav.container {
-    margin-left: auto;
-    margin-right: auto;
-  }
+@media screen and (min-width: 1080px){ 
 
   .nav{
+    height: 5.5rem;
     justify-content: space-between;
     align-items: center;
+
+    &.container {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .header-nav{
-      &__menu {
-        display: flex;
+    &__menu {
+      display: flex;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 3.5rem;
+
+      .nav__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $dark;
+
+        
       }
 
-      &__list {
-        display: flex;
-        flex-direction: row;
-        column-gap: 3.5rem;
+      .nav__link-buy{
+        background-color: $orange-brand;
+        padding: 10px 20px 10px;
+        border-radius: 150px;
+        color: $White;
       }
+    }
+  }
+  
+  .container{
+    max-width: 80%;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   /*===============  COVER ===============*/
@@ -535,10 +605,9 @@ $header-height: 3rem;
         @include aspect-ratio(1440, 1563);
     }
 
-    &__wrapper-tests {
-      left: 50%;
-      transform: translateX(-50%);
-      width: 860px;
+    &__wrapper-texts {
+      width: 60%;
+      top: 14%;
     }
 
     &__subtitle {
@@ -616,18 +685,18 @@ $header-height: 3rem;
     &__container {
       display: flex;
       flex-direction: row;
+      justify-content: flex-end;
     }
 
     &__wrapper-texts {
-      margin-bottom: 0;
-      padding-left: 124px;
+      margin: 0;
+      width: 30%;
       display: flex;
       align-items: center;
     }
 
     &__wrap {
       text-align: left;
-      max-width: 31.375rem;
 
       h4 {
         font-size: 40px;
@@ -697,7 +766,7 @@ $header-height: 3rem;
     }
 
     &__wrap {
-      max-width: 31.375rem;
+      max-width: 80%;
 
       i {
         font-size: 50px;
@@ -717,13 +786,36 @@ $header-height: 3rem;
     }
   }
 
+  /*===============  CHOOSE ===============*/
+
+  .choose {
+
+    &__wrapper-head {
+      padding-top: 87px;
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    
+    &__subtitle {
+      font-size: 52px;
+      line-height: 60px;
+      margin-bottom: 35px;
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
   /*===============  TESTIMONIALS ===============*/
 
   .testimonials {
 
-
     &__container{
-      padding: 100px 0;
+      padding: 100px;
 
       margin-left: auto;
       margin-right: auto;
@@ -760,7 +852,22 @@ $header-height: 3rem;
 
     &__card {
       width: calc(100%/3.1);
-      padding: 51px 41px 35px 41px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    &__wrapper-media {
+      @include aspect-ratio(315, 315);
+    }
+
+    &__texts-small {
+      h5 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
     }
   }
 
