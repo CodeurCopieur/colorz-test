@@ -19,7 +19,7 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <nav class="nav container">
       <a href="" class="header-nav__logo" id="navLogo">Vison.R</a>
       <div class="header-nav__menu" id="nav-menu">
@@ -27,6 +27,7 @@
           <li class="nav__item"><a href="" class="nav__link">Low Solution</a></li>
           <li class="nav__item"><a href="" class="nav__link">Low Technology</a></li>
           <li class="nav__item"><a href="" class="nav__link">High Price</a></li>
+          <li class="nav__item"><a href="" class="nav__link nav__link-buy">Buy it</a></li>
         </ul>
       </div>
     </nav>
@@ -37,7 +38,7 @@
     <!--=============== COVER ===============-->
     <section class="cover section" id="cover">
       <div class="cover__container" >
-          <div class="cover__wrapper-tests" id="coverWrapperTexts">
+          <div class="cover__wrapper-texts" id="coverWrapperTexts">
             <p class="cover__subtitle">
               Du JAMAIS VU (enfin jusqu’à maintenant, du coup)
             </p>
@@ -71,7 +72,7 @@
           With Vision.R, be rassuré.e.s ! Get instant, real time, high resolution, social videocall and feel comme à la maison. Bref, get ready to faire un carton !
         </p>
       </div>
-      <a href="#" class="intro__link" data-scroll-to="#buyIt">Buy it now</a>
+      <a href="#" class="intro__link" id="intro__link" data-scroll-to="#buyIt">Buy it now</a>
     </div>
   </section>
 
@@ -141,14 +142,14 @@
     <!--=============== SITUATION  ===============-->
 
     <section class="situation section">
-      <p class="situation__subtitle">With your Vision.R</p>
+      <p class="situation__subtitle" id="situationSubtitle">With your Vision.R</p>
       <h4 class="situation__title">
         Get ready to any situation !
       </h4>
 
       <div class="situation__container">
         <div class="situation__wrapper-texts">
-          <div class="situation__wrap">
+          <div class="situation__wrap" id="situationWrap">
             <i class='bx bx-lock'></i>
             <h4>
               The pudique (or je suis en pyjama et j’assume pas) effect
@@ -159,10 +160,8 @@
           </div>
           
         </div>
-        <div class="situation__wrapper-media">
+        <div class="situation__wrapper-media" id="situation__wrapper-media">
           <picture>
-            <source media="(min-width: 1024px)" srcset="./assets/img/desk-pudique.svg">
-            <source media="(min-width: 768px)" srcset="./assets/img/desk-pudique.svg.svg">
   
             <img class="situation__media start" alt="" id="situation__media" data-object-fit-images="" src="./assets/img/mob-pudique.svg" >
           </picture>
@@ -175,7 +174,7 @@
     <section class="choose section">
 
       <div class="choose__wrapper-head">
-        <h5 class="choose__subtitle">Whatever your style,you will forcément find your bonheur</h5>
+        <h5 class="choose__subtitle">Whatever your style, you will forcément find your bonheur</h5>
         <a href="" class="choose__link">Choose your Vision.R</a>
       </div>
       
@@ -186,7 +185,7 @@
     </section>
     <!--=============== TESTIMONIALS  ===============-->
 
-      <section class="testimonials section">
+      <section class="testimonials ">
       <!--=============== Slider main container ===============-->
          <div class="testimonials__container container">
       <!--=============== Additional required wrapper ===============-->
@@ -219,7 +218,7 @@
     </section>
 
     <!--=============== PRODUCTS  ===============-->
-    <section class="products section">
+    <section class="products">
      
 
         
@@ -247,51 +246,26 @@
               <article class="products__card swiper-slide">
                 <div class="products__wrapper-media">
                   <picture>
-                    <img src="./assets/img/desk-product1.svg" alt="">
+                    <img src="./assets/img/desk-product2.svg" alt="">
                   </picture>
                 </div>
                 <div class="products__texts-small">
-                  <h5>The funny filter kit (D’jeuns friendly)</h5>
-                  <p>199,00 €</p>
+                  <h5>Screen camera off</h5>
+                  <p>229,00 €</p>
                 </div>
               </article>
 
               <article class="products__card swiper-slide">
                 <div class="products__wrapper-media">
                   <picture>
-                    <img src="./assets/img/desk-product1.svg" alt="">
+                    <img src="./assets/img/desk-product3.svg" alt="">
                   </picture>
                 </div>
                 <div class="products__texts-small">
-                  <h5>The funny filter kit (D’jeuns friendly)</h5>
-                  <p>199,00 €</p>
+                  <h5>The Charentaiz (Yeuv Friendly)</h5>
+                  <p>349,95 €</p>
                 </div>
               </article>
-
-              <article class="products__card swiper-slide">
-                <div class="products__wrapper-media">
-                  <picture>
-                    <img src="./assets/img/desk-product1.svg" alt="">
-                  </picture>
-                </div>
-                <div class="products__texts-small">
-                  <h5>The funny filter kit (D’jeuns friendly)</h5>
-                  <p>199,00 €</p>
-                </div>
-              </article>
-
-              <article class="products__card swiper-slide">
-                <div class="products__wrapper-media">
-                  <picture>
-                    <img src="./assets/img/desk-product1.svg" alt="">
-                  </picture>
-                </div>
-                <div class="products__texts-small">
-                  <h5>The funny filter kit (D’jeuns friendly)</h5>
-                  <p>199,00 €</p>
-                </div>
-              </article>
-
               
             </div>
           </div>
