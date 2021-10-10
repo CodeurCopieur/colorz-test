@@ -4,7 +4,17 @@ window.addEventListener('DOMContentLoaded', () => {
   this.sectionTwoScrollAnimations();
 
   this.initAnimations();
+
+  window.addEventListener('scroll', scrollHeader);
 });
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader(){
+  const header = document.getElementById('header')
+  // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+  if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+}
+
 
 function disabledScroll( disabled ){
   disabled ? this.document.querySelector('body').style.overflowY = "hidden" :
@@ -87,22 +97,49 @@ function sectionTwoScrollAnimations() {
   tl
   .from( "#advancedWrap > *", {
     scrollTrigger: {
-      trigger: "#advanced",
+      trigger: "#intro__link",
       scrub: true,
+      start: 'top+=100 center'
     },
     duration: .5,
-    x: -40,
-    opacity: .75
+    y: -40,
+    opacity: 0,
+    stagger: .15
   })
   .from( "#advanced__wrapper-media", {
     scrollTrigger: {
-      trigger: "#advanced",
+      trigger: "#intro__link",
       scrub: true,
+      start: 'top+=100 center'
     },
     duration: .5,
-    x: 80,
-    opacity: .75
+    y: -40,
+    opacity: 0
   })
+  .from( "#situationWrap > *", {
+    scrollTrigger: {
+      trigger: "#situationSubtitle",
+      scrub: true,
+      start: 'top+=200 center'
+    },
+    duration: .5,
+    y: -40,
+    opacity: 0,
+    stagger: .15
+  })
+  .from( "#situation__wrapper-media", {
+    scrollTrigger: {
+      trigger: "#situationSubtitle",
+      scrub: true,
+      start: 'top+=100 center'
+    },
+    duration: .5,
+    y: -40,
+    opacity: 0
+  })
+
+
+
 }
 
 
