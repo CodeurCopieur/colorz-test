@@ -78,7 +78,7 @@
 
    <!--=============== ADVANCED ===============-->
 
-   <section class="advanced section" id="advanced">
+   <section class="advanced" id="advanced">
      <div class="advanced__container">
        <div class="advanced__wrapper-texts">
           <div class="advanced__wrap" id="advancedWrap">
@@ -104,7 +104,7 @@
 
 
    <!--=============== SLIDER IMAGE ===============-->
-    <section class="slider-image section swiper">
+    <section class="slider-image">
    
 <!--=============== Slider main container ===============-->
    <div class="swiper slider-image__swipper">
@@ -136,12 +136,12 @@
         </div>
       </div>
       <div class="swiper-pagination slider-image__pagination"></div>
-   
+      </div>
     </section>
    
     <!--=============== SITUATION  ===============-->
 
-    <section class="situation section">
+    <section class="situation">
       <p class="situation__subtitle" id="situationSubtitle">With your Vision.R</p>
       <h4 class="situation__title">
         Get ready to any situation !
@@ -171,7 +171,7 @@
 
     <!--=============== CHOOSE  ===============-->
 
-    <section class="choose section">
+    <section class="choose">
 
       <div class="choose__wrapper-head">
         <h5 class="choose__subtitle">Whatever your style, you will forcément find your bonheur</h5>
@@ -179,8 +179,28 @@
       </div>
       
 
-      <div class="choose container">
+      <div class="choose__container">
+        <!--=============== Slider main container ===============-->
+        <div class="swiper choose-swiper">
+          <!--=============== Additional required wrapper ===============-->
 
+          <div class="swiper-wrapper">
+            <!--=============== Slides ===============-->
+
+            <div class="swiper-slide choose__card">
+              <picture>
+                <img src="./assets/img/desk-multiple1.svg" alt="">
+              </picture>
+            </div>
+
+            <div class="swiper-slide choose__card">
+              <picture>
+                <img src="./assets/img/desk-multiple1.svg" alt="">
+              </picture>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
     <!--=============== TESTIMONIALS  ===============-->
@@ -192,11 +212,26 @@
           <div class="swiper testimonials-swiper">
             <!--=============== Slides ===============-->
             <div class="swiper-wrapper">
+
               <div class="swiper-slide">
-              <div class="testimonials__wrap-texts">
-                <p>“ Le grand écart technologique que tout le monde attendait ! ”</p>
-                  <h5>Jean-Claude Van Damme</h5>
+                <div class="testimonials__wrap-texts">
+                  <p>“ Le grand écart technologique que tout le monde attendait ! ”</p>
+                    <h5>Jean-Claude Van Damme</h5>
+                </div>
               </div>
+
+              <div class="swiper-slide">
+                <div class="testimonials__wrap-texts">
+                  <p>“ Le grand écart technologique que tout le monde attendait ! ”</p>
+                  <h5>Jean-Claude Van Damme</h5>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonials__wrap-texts">
+                  <p>“ Le grand écart technologique que tout le monde attendait ! ”</p>
+                  <h5>Jean-Claude Van Damme</h5>
+                </div>
               </div>
 
               <div class="swiper-slide">
@@ -209,25 +244,16 @@
 
             <div class="swiper-pagination testimonials__pagination"></div>
           </div>
-           
-           
-
          </div>
-      
        </section>
-    </section>
 
     <!--=============== PRODUCTS  ===============-->
-    <section class="products">
-     
-
-        
-        <div class="products__container container">
-          
-          <h4 class="products__title">
+    <section class="products" >
+        <h4 class="products__title" id="productsTitle">
           Some indispensables accessoires to optimize your experience
-         </h4>
-          <div class="swiper new-swiper">
+        </h4>
+        <div class="products__container container">
+          <div class="swiper new-swiper" id="productsSwiper">
             <div class="swiper-wrapper">
               <article class="products__card swiper-slide">
                 <div class="products__wrapper-media">
