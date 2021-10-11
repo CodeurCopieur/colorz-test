@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-show="false">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,7 +93,6 @@
 
        <div class="advanced__wrapper-media" id="advanced__wrapper-media">
         <picture>
-          <source media="(min-width: 1024px)" srcset="./assets/img/desk-advanced.svg">
           <source media="(min-width: 768px)" srcset="./assets/img/desk-advanced.svg">
 
           <img class="advanced__media start" alt="" id="advanced__media" data-object-fit-images="" src="./assets/img/mob-advanced.svg" >
@@ -106,8 +105,8 @@
    <!--=============== SLIDER IMAGE ===============-->
     <section class="slider-image">
    
-<!--=============== Slider main container ===============-->
-   <div class="swiper slider-image__swipper">
+      <!--=============== Slider main container ===============-->
+      <div class="swiper slider-image__swipper">
 
     <!--=============== Additional required wrapper ===============-->
 
@@ -162,7 +161,7 @@
         </div>
         <div class="situation__wrapper-media" id="situation__wrapper-media">
           <picture>
-  
+            <source media="(min-width: 768px)" srcset="./assets/img/desk-pudique.svg">
             <img class="situation__media start" alt="" id="situation__media" data-object-fit-images="" src="./assets/img/mob-pudique.svg" >
           </picture>
          </div>
@@ -342,6 +341,26 @@
       </div>
       
     </footer>
+
+    <div class="popup">
+      <div class="popup__container">
+        <div class="popup__close">
+           <i class='bx bx-x'></i>
+        </div>
+
+        <div class="popup__wrapper-texts">
+          <img src="./assets/img/speak-no-evil-monkey.svg" alt="">
+
+          <h4>Vous y avez (vraiment?) cru ?</h4>
+          <p>
+            En tout cas, on espère que ça vous a fait sourire, parce qu’on en a bien besoin en ce moment. <b>Et sinon, vous avez sûrement des produits plus intéressants à vendre.</b>
+          </p>
+          <p>
+            Ça tombe bien, nos équipes sont plus fortes en communication digitale qu’en innovations en carton.
+          </p>
+        </div>
+      </div>
+    </div>
   </main>
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
