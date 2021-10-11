@@ -356,7 +356,6 @@ $header-height: 3rem;
 
 .choose {
   background-color: $bgColor;
-  
 
   &__wrapper-head {
     max-width: 70%;
@@ -379,6 +378,10 @@ $header-height: 3rem;
     padding: 18px 30px 20px;
     color: $White;
     text-align: center;
+  }
+
+  &__card {
+    width: calc(100%/2);
   }
 }
 
@@ -428,18 +431,18 @@ $header-height: 3rem;
 
   &__container{
     margin: 0;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    
   }
 
   &__title {
     font-weight: 500;
     font-size: 30px;
     line-height: 42px;
-    margin-bottom: 40px;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
 
   &__card {
@@ -516,6 +519,7 @@ $header-height: 3rem;
 .swiper-pagination-bullet {
   background-color: $White;
   opacity: 1;
+  margin-right: 10px!important;
 }
 
 .swiper-pagination-bullet-active {
@@ -810,7 +814,6 @@ $header-height: 3rem;
       margin-right: auto;
     }
 
-    
     &__subtitle {
       font-size: 52px;
       line-height: 60px;
@@ -821,6 +824,8 @@ $header-height: 3rem;
       font-size: 16px;
       line-height: 20px;
     }
+
+    
   }
 
   /*===============  TESTIMONIALS ===============*/
@@ -842,7 +847,10 @@ $header-height: 3rem;
         margin-bottom: 22px;
       }
     }
-    
+
+    &__pagination {
+      margin-top: 34px;
+    }
   }
 
 
@@ -853,12 +861,14 @@ $header-height: 3rem;
       margin-left: auto;
       margin-right: auto;
 
-      padding: 100px 0;
+      padding-bottom: 100px;
     }
 
     &__title {
+      padding-top: 100px;
+      padding-bottom: 0;
       margin-bottom: 73px;
-      max-width: 760px;
+      max-width: 50%;
       font-size: 52px;
       line-height: 60px;
     }
@@ -881,6 +891,9 @@ $header-height: 3rem;
       p {
         font-size: 16px;
       }
+    }
+    .swiper-wrapper {
+      margin-bottom: 10px;
     }
   }
 
