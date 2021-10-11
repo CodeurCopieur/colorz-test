@@ -44,6 +44,7 @@ button{
 img{
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 @mixin aspect-ratio($width, $height, $displayType: block, $important:false) {
@@ -431,7 +432,7 @@ $header-height: 3rem;
 
   &__container{
     margin: 0;
-    
+    padding-bottom: 60px;
   }
 
   &__title {
@@ -516,6 +517,80 @@ $header-height: 3rem;
 
 }
 
+/*===============  POPUP ===============*/
+
+.popup {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  z-index: 5000;
+
+  &__container {
+    background-color: $White;
+    width: 90%;
+    box-shadow: 0 .4rem 4rem -.4rem rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 82px 0;
+    
+  }
+
+  &__close {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+
+    cursor: pointer;
+
+    i {
+      font-size: 40px;
+      color: $light-grey-border;
+    }
+  }
+
+  &__wrapper-texts {
+    text-align: center;
+
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      width: 60px;
+      height: 60px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 20px;
+
+      &:first-of-type{
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
 .swiper-pagination-bullet {
   background-color: $White;
   opacity: 1;
@@ -528,12 +603,15 @@ $header-height: 3rem;
 
 /*===============  BREAKPOINTS ===============*/
 
-@media screen and (max-width: 320px) {
 
-}
-
-@media screen and (min-width: 576px) {
+@media (min-width: 668px) and (max-width: 1079px) {
   
+  .popup {
+
+    &__container {
+      width: 70%;
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -562,6 +640,8 @@ $header-height: 3rem;
     margin-left: auto;
     margin-right: auto;
   }
+
+
 
 }
 
@@ -929,5 +1009,39 @@ $header-height: 3rem;
       right: 0;
       bottom: 0;
     }
+  }
+
+  .popup {
+
+    &__container {
+      width: 60%;
+    }
+
+    &__wrapper-texts {
+      max-width: 80%;
+
+      img {
+        width: 73px;
+        height: 73px;
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 56px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 22px;
+        line-height: 34px;
+
+        &:first-of-type{
+          margin-bottom: 30px;
+        }
+      }
+    }
+    
   }
 }
