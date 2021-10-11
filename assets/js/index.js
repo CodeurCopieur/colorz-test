@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
   this.disabledScroll(true);
   this.sectionOneScrollAnimations();
   this.sectionTwoScrollAnimations();
+  this.sectionThreeScrollAnimations();
 
   this.initAnimations();
 
@@ -99,7 +100,7 @@ function sectionTwoScrollAnimations() {
     scrollTrigger: {
       trigger: "#intro__link",
       scrub: true,
-      start: 'top+=100 center'
+      start: 'top-=100 center'
     },
     duration: .5,
     y: -40,
@@ -110,7 +111,7 @@ function sectionTwoScrollAnimations() {
     scrollTrigger: {
       trigger: "#intro__link",
       scrub: true,
-      start: 'top+=100 center'
+      start: 'top-=100 center'
     },
     duration: .5,
     y: -40,
@@ -142,20 +143,45 @@ function sectionTwoScrollAnimations() {
 
 }
 
+function sectionThreeScrollAnimations() {
+  const tl = gsap.timeline();
 
-
-
+  tl
+  .from("#productsSwiper", {
+    scrollTrigger:  {
+      trigger: "#productsTitle",
+      scrub: true,
+      start: 'top-=200 center'
+    },
+    duration: .5,
+    opacity: 0
+  })
+}
 
 /*=============== TESTIMONIALS SWIPER ===============*/
 let homeSwiper = new Swiper(".testimonials-swiper, .slider-image__swipper", {
-
   loop: 'true',
-  
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
   pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-})
+});
+
+/*===============  CHOOSE ===============*/
+let chooseSwiper = new Swiper(".choose-swiper", {
+  centeredSlides: true,
+  slidesPerView: "auto",
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+  loop: 'true',
+  spaceBetween: 16
+});
 
 
 /*===============  SWIPER PRODUCT ===============*/
@@ -163,5 +189,5 @@ let newSwiper = new Swiper(".new-swiper", {
   centeredSlides: true,
   slidesPerView: "auto",
   loop: 'true',
-  spaceBetween: 16,
+  spaceBetween: 16
 });
