@@ -519,6 +519,11 @@ $header-height: 3rem;
 
 /*===============  POPUP ===============*/
 
+[data-popup="true"] #popup {
+  opacity: 0!important;
+  visibility: hidden!important;
+}
+
 .popup {
   position: fixed;
   opacity: 0;
@@ -529,6 +534,11 @@ $header-height: 3rem;
   height: 100%;
   background: rgba(0, 0, 0, .6);
   z-index: 5000;
+  transition: all .5s linear;
+
+  #checkbox {
+    display: none;
+  }
 
   &__container {
     background-color: $White;
