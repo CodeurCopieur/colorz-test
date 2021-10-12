@@ -46,7 +46,6 @@ function disabledScroll( disabled ){
           scrollTrigger: {
             trigger: "#choose",
             scrub: true,
-            markers: true,
             start: 'top center',
             onEnter: () => {
               showPopup();
