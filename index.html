@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-show="false">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -170,7 +170,7 @@
 
     <!--=============== CHOOSE  ===============-->
 
-    <section class="choose">
+    <section class="choose" id="choose">
 
       <div class="choose__wrapper-head">
         <h5 class="choose__subtitle">Whatever your style, you will forcément find your bonheur</h5>
@@ -342,11 +342,12 @@
       
     </footer>
 
-    <div class="popup">
+    <div class="popup" id="popup">
       <div class="popup__container">
-        <div class="popup__close">
-           <i class='bx bx-x'></i>
-        </div>
+          <label class="popup__close" for="checkbox">
+            <input type="checkbox" id="checkbox">
+            <i class='bx bx-x'></i>
+        </label>
 
         <div class="popup__wrapper-texts">
           <img src="./assets/img/speak-no-evil-monkey.svg" alt="">
