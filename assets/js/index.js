@@ -1,3 +1,7 @@
+const iconeClose = document.querySelector('.popup__close');
+const toggleShow = document.querySelector('.popup__close input[type="checkbox"]');
+const currentTheme = localStorage.getItem('showPopup') ? localStorage.getItem('showPopup') : null;
+
 window.addEventListener('DOMContentLoaded', () => {
   this.disabledScroll(true);
   this.sectionOneScrollAnimations();
@@ -7,6 +11,18 @@ window.addEventListener('DOMContentLoaded', () => {
   this.initAnimations();
 
   window.addEventListener('scroll', scrollHeader);
+
+
+  toggleShow.addEventListener('click', (e) => {
+    e.target.checked = true;
+
+    if(e.target.checked && localStorage.getItem('showPopup')) {
+      gsap.to( "#popup", {autoAlpha:0})
+
+      document.documentElement.setAttribute('data-popup', 'true');
+    }
+    
+  })
 });
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
@@ -16,10 +32,32 @@ function scrollHeader(){
   if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
 }
 
+/* ANIMATION SCROLL */
 
 function disabledScroll( disabled ){
-  disabled ? this.document.querySelector('body').style.overflowY = "hidden" :
+  if(disabled) {
+    this.document.querySelector('body').style.overflowY = "hidden";
+  } else {
     this.document.querySelector('body').style.overflowY = "auto";
+
+
+      if(!localStorage.getItem('showPopup')){
+        gsap.from( "#choose", {
+          scrollTrigger: {
+            trigger: "#choose",
+            scrub: true,
+            markers: true,
+            start: 'top center',
+            onEnter: () => {
+              showPopup();
+              localStorage.setItem('showPopup', true); //add this
+            }
+          }
+        });
+      } else {
+        gsap.to( "#popup", {autoAlpha:0})
+      }
+  }
 }
 
 function initAnimations() {
@@ -87,7 +125,7 @@ function sectionOneScrollAnimations() {
     delay: .2,
     scrollTrigger: {
       trigger: "#introContainer",
-      start: 'top-=200'
+      start: 'top-=200 center'
     }
   })
 }
@@ -138,9 +176,15 @@ function sectionTwoScrollAnimations() {
     y: -40,
     opacity: 0
   })
+}
 
+function showPopup() {
+  const tl = gsap.timeline();
 
-
+  tl
+  .to('#popup', {
+    autoAlpha: 1
+  })
 }
 
 function sectionThreeScrollAnimations() {
